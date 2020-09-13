@@ -1,0 +1,2 @@
+# github.com/sarulabs/di v2.0.0+incompatible
+github.com/sarulabs/di
