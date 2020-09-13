@@ -9,6 +9,7 @@ import (
 
 	"2point/app/infrastructure/components"
 	"2point/app/infrastructure/services"
+	"2point/app/interface/router"
 )
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 	container := services.NewApp()
 	logger := container.Get("logger").(*log.Logger)
 	config := container.Get("config").(*components.Config)
-	mux := container.Get("router").(*http.ServeMux)
+	mux := router.GetMux(container)
 
 	logger.Println("App started")
 	logger.Println("App port: ", config.GetPort())

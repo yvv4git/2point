@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"2point/app/infrastructure/components"
-	"2point/app/interface/router"
 
 	"github.com/sarulabs/di"
 )
@@ -39,14 +38,6 @@ func NewApp() di.Container {
 		Build: func(container di.Container) (interface{}, error) {
 			storage, err := components.NewStorage("simple")
 			return storage, err
-		},
-	})
-
-	err = builder.Add(di.Def{
-		Name: "router",
-		Build: func(container di.Container) (interface{}, error) {
-			mux := router.GetMux(container)
-			return mux, nil
 		},
 	})
 
