@@ -2,6 +2,7 @@ package components
 
 import "errors"
 
+// Storage is a interface for many storage types.
 type Storager interface {
 	Increment(userId int)
 	GetValue() int

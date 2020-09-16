@@ -8,6 +8,7 @@ import (
 const maxCount = 10
 const timeWaitMinuteCheck = 1
 
+// StorrageSimple is a simple realization of Storager interface.
 type StorageSimple struct {
 	mx         sync.RWMutex
 	counter    map[int]int
