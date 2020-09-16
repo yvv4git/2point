@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+
+  web2point:
+    build: .
+    container_name: web2point
+    hostname: web2point
+    ports:
+      - 8080:8080
