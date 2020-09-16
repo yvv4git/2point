@@ -9,7 +9,7 @@ import (
 )
 
 // GetMux is a simple method for router logic encapsulation.
-func GetMux(container di.Container) *http.ServeMux {
+func NewMux(container di.Container) *http.ServeMux {
 	var countController controllers.CountController
 	var useridController controllers.UseridController
 
