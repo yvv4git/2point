@@ -20,7 +20,7 @@ func main() {
 	container := services.NewApp()
 	logger := container.Get("logger").(*log.Logger)
 	config := container.Get("config").(*components.Config)
-	mux := router.GetMux(container)
+	mux := router.NewMux(container)
 
 	logger.Println("App started")
 	logger.Println("App port: ", config.GetPort())
