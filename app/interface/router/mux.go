@@ -8,7 +8,7 @@ import (
 	"github.com/sarulabs/di"
 )
 
-// GetMux is a simple method for router logic encapsulation.
+// NewMux is a simple method for router logic encapsulation.
 func NewMux(container di.Container) *http.ServeMux {
 	var countController controllers.CountController
 	var useridController controllers.UseridController
